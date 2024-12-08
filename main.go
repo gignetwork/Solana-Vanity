@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"strings"
 	"time"
+        "os"
+
 
 	"github.com/gagliardetto/solana-go"
 )
@@ -41,6 +43,8 @@ func main() {
 	
 
 		go generateWallet()
+		time.Sleep(2*time.Second)
+                os.Exit(0)
 
 	fmt.Scanln()
 
