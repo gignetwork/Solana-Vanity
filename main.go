@@ -9,9 +9,9 @@ import (
 )
 
 var generatedCount = 0
-var numThreads = 16
+var numThreads = 10
 var startTime = time.Now()
-var searchTerm = "d"
+var searchTerm = ""
 var shouldStopThreads = false
 
 func generateWallet() {
@@ -39,9 +39,9 @@ func generateWallet() {
 
 func main() {
 	
-	for i := 0; i < numThreads; i++ {
+
 		go generateWallet()
-	}
+
 	fmt.Scanln()
 
 }
